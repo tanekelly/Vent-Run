@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://blfh6s1jw0o7x" path="res://Stages/LevelB/Assets/Art/Decorations/Paintings/painting2.png" id="9_ibqyo"]
 [ext_resource type="Texture2D" uid="uid://epj01v8xqyao" path="res://Stages/LevelB/Assets/Art/Decorations/Paintings/painting1.png" id="10_ea8j7"]
 [ext_resource type="Texture2D" uid="uid://c3meq28gy864r" path="res://Stages/LevelB/Assets/Art/Decorations/Paintings/painting3.png" id="11_uxs46"]
-[ext_resource type="Texture2D" uid="uid://hnotc5650uws" path="res://Stages/LevelB/Assets/Art/Lights/light1.png" id="12_2obye"]
 [ext_resource type="Texture2D" uid="uid://c214ssfut62op" path="res://Assets/Art/spotlight.jpg" id="13_64npm"]
 [ext_resource type="Texture2D" uid="uid://c30euymtxokb0" path="res://Stages/LevelB/Assets/Art/Decorations/boots.png" id="14_bsrsk"]
 [ext_resource type="Texture2D" uid="uid://xn84njegain7" path="res://Stages/LevelB/Assets/Art/Decorations/shelf1.png" id="15_bantm"]
@@ -328,6 +327,9 @@ animations = [{
 "name": &"default",
 "speed": 3.0
 }]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_poh8g"]
+load_path = "res://.godot/imported/light1.png-057b94a6c08321ee7ec844c6aa143302.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t1lw8"]
 atlas = ExtResource("14_bsrsk")
@@ -769,7 +771,7 @@ position = Vector2(154, 47)
 [node name="LightTexture" type="Sprite2D" parent="Background/DecorationsGroup1/Light1"]
 position = Vector2(1000, -58.9999)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("12_2obye")
+texture = SubResource("CompressedTexture2D_poh8g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Background/DecorationsGroup1/Light1"]
 position = Vector2(993, 638)
