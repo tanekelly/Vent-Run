@@ -186,7 +186,7 @@ sprite_frames = SubResource("SpriteFrames_wqvtv")
 frame = 4
 frame_progress = 0.552584
 
-[node name="!Alarm" type="AnimatedSprite2D" parent="Background/EntranceDoor"]
+[node name="Alarm" type="AnimatedSprite2D" parent="Background/EntranceDoor"]
 position = Vector2(1883, 736)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_850el")
