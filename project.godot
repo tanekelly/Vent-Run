@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="vent-run"
-run/main_scene="uid://d3udx07gspf5o"
+run/main_scene="uid://dibpj5ixgxfvr"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="uid://cjvqbt2rtbuvj"
 

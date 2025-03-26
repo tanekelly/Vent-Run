@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfjsiorrhiy8s"]
+
+[ext_resource type="Texture2D" uid="uid://cjvqbt2rtbuvj" path="res://icon.png" id="1_7wwrm"]
+[ext_resource type="Script" uid="uid://bhhdds36yasoc" path="res://Entities/Player/Data/reference_controller.gd" id="1_8b7eu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bquq3"]
+size = Vector2(120, 182)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_jqubx"]
+diffuse_texture = ExtResource("1_7wwrm")
+
+[node name="ControllerReference" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_8b7eu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.500031, 2)
+shape = SubResource("RectangleShape2D_bquq3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.250031, 2.75006)
+scale = Vector2(0.133446, 0.210023)
+texture = SubResource("CanvasTexture_jqubx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(2.50003, -347)
+position_smoothing_enabled = true

@@ -1,0 +1,253 @@
+[gd_scene load_steps=23 format=3 uid="uid://dibpj5ixgxfvr"]
+
+[ext_resource type="Texture2D" uid="uid://e4qmpcl1p0cw" path="res://Stages/LevelB/Assets/Art/Distant/ceiling.png" id="1_5l77a"]
+[ext_resource type="Texture2D" uid="uid://xcutva6bf22r" path="res://Stages/LevelB/Assets/Art/Distant/wainscoting.png" id="1_1410t"]
+[ext_resource type="Script" uid="uid://derl1vbeci6nh" path="res://Stages/LevelB/Resources/level_b.gd" id="1_ld1fv"]
+[ext_resource type="Texture2D" uid="uid://dru3e6nf1g3h4" path="res://Assets/Art/gradient.png" id="2_1410t"]
+[ext_resource type="Texture2D" uid="uid://cgowpbjnqoqwf" path="res://Stages/LevelB/Assets/Art/Distant/block.svg" id="2_r4pgn"]
+[ext_resource type="Texture2D" uid="uid://b31tfwo77yfw3" path="res://Stages/LevelB/Assets/Art/Doors/door1.png" id="3_bquq3"]
+[ext_resource type="PackedScene" uid="uid://bfjsiorrhiy8s" path="res://Entities/Player/reference_controller.tscn" id="3_gvv6p"]
+[ext_resource type="Texture2D" uid="uid://dea8lnbfgk5k7" path="res://Stages/LevelB/Assets/Art/Distant/ground.png" id="3_r4pgn"]
+[ext_resource type="Texture2D" uid="uid://gu8a8yfxd04l" path="res://Stages/LevelB/Assets/Art/Decorations/alarm.png" id="4_jqubx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqubx"]
+atlas = ExtResource("3_bquq3")
+region = Rect2(0, 0, 989, 2387)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ld1fv"]
+atlas = ExtResource("3_bquq3")
+region = Rect2(989, 0, 989, 2387)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7uvhj"]
+atlas = ExtResource("3_bquq3")
+region = Rect2(1978, 0, 989, 2387)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ujho"]
+atlas = ExtResource("3_bquq3")
+region = Rect2(2967, 0, 989, 2387)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0r13l"]
+atlas = ExtResource("3_bquq3")
+region = Rect2(3956, 0, 989, 2387)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wqvtv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqubx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ld1fv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7uvhj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ujho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0r13l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqvtv"]
+atlas = ExtResource("4_jqubx")
+region = Rect2(0, 0, 267, 869)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yosl"]
+atlas = ExtResource("4_jqubx")
+region = Rect2(267, 0, 267, 869)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nuvul"]
+atlas = ExtResource("4_jqubx")
+region = Rect2(534, 0, 267, 869)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1a4a"]
+atlas = ExtResource("4_jqubx")
+region = Rect2(801, 0, 267, 869)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivast"]
+atlas = ExtResource("4_jqubx")
+region = Rect2(1068, 0, 267, 869)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_850el"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqvtv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yosl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nuvul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1a4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivast")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gvv6p"]
+
+[node name="LevelB" type="Node2D"]
+script = ExtResource("1_ld1fv")
+
+[node name="Distant" type="Node2D" parent="."]
+z_index = -1
+
+[node name="Wall" type="ColorRect" parent="Distant"]
+offset_left = -4620.0
+offset_right = 1920.0
+offset_bottom = 52.0
+scale = Vector2(1, 21.16)
+color = Color(0.937255, 0.921569, 0.913725, 1)
+metadata/_edit_lock_ = true
+
+[node name="Wainscotting" type="Node2D" parent="Distant"]
+metadata/_edit_lock_ = true
+
+[node name="Wainscoting" type="Sprite2D" parent="Distant/Wainscotting"]
+position = Vector2(1513, 813)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_1410t")
+metadata/_edit_lock_ = true
+
+[node name="Wainscoting2" type="Sprite2D" parent="Distant/Wainscotting"]
+position = Vector2(715, 813)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_1410t")
+metadata/_edit_lock_ = true
+
+[node name="Wainscoting3" type="Sprite2D" parent="Distant/Wainscotting"]
+position = Vector2(-83.9999, 813)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_1410t")
+metadata/_edit_lock_ = true
+
+[node name="Wainscoting4" type="Sprite2D" parent="Distant/Wainscotting"]
+position = Vector2(-885, 813)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_1410t")
+metadata/_edit_lock_ = true
+
+[node name="Wainscoting5" type="Sprite2D" parent="Distant/Wainscotting"]
+position = Vector2(-1682, 813)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_1410t")
+metadata/_edit_lock_ = true
+
+[node name="Wainscoting6" type="Sprite2D" parent="Distant/Wainscotting"]
+position = Vector2(-2482, 813)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_1410t")
+metadata/_edit_lock_ = true
+
+[node name="Wainscoting7" type="Sprite2D" parent="Distant/Wainscotting"]
+position = Vector2(-3286, 813)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_1410t")
+metadata/_edit_lock_ = true
+
+[node name="Wainscoting8" type="Sprite2D" parent="Distant/Wainscotting"]
+position = Vector2(-4091, 813)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_1410t")
+metadata/_edit_lock_ = true
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="EntranceDoor" type="Node2D" parent="Background"]
+
+[node name="Block" type="NinePatchRect" parent="Background/EntranceDoor"]
+offset_left = 1617.0
+offset_top = 93.0
+offset_right = 3167.0
+offset_bottom = 4548.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_r4pgn")
+patch_margin_left = 42
+patch_margin_top = 48
+patch_margin_right = 47
+patch_margin_bottom = 49
+
+[node name="EntranceDoor" type="AnimatedSprite2D" parent="Background/EntranceDoor"]
+position = Vector2(1745, 749)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_wqvtv")
+frame = 4
+frame_progress = 0.552584
+
+[node name="!Alarm" type="AnimatedSprite2D" parent="Background/EntranceDoor"]
+position = Vector2(1883, 736)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_850el")
+
+[node name="ControllerReference" parent="." instance=ExtResource("3_gvv6p")]
+position = Vector2(845, 848)
+
+[node name="Foreground" type="Node2D" parent="."]
+
+[node name="Ceiling" type="Node2D" parent="Foreground"]
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Foreground/Ceiling"]
+position = Vector2(-1350, 0)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_5l77a")
+metadata/_edit_lock_ = true
+
+[node name="Gradient" type="Sprite2D" parent="Foreground/Ceiling"]
+position = Vector2(-1351, 96)
+scale = Vector2(5.11172, 0.409375)
+texture = ExtResource("2_1410t")
+metadata/_edit_lock_ = true
+
+[node name="TopDarkness" type="ColorRect" parent="Foreground/Ceiling"]
+offset_left = -4617.0
+offset_top = -1199.0
+offset_right = 1923.0
+offset_bottom = -1147.0
+scale = Vector2(1, 21.16)
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="Ground" type="Node2D" parent="Foreground"]
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Foreground/Ground"]
+position = Vector2(-1350, 1080)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_r4pgn")
+metadata/_edit_lock_ = true
+
+[node name="Gradient" type="Sprite2D" parent="Foreground/Ground"]
+position = Vector2(-1349, 984.078)
+rotation = 3.14159
+scale = Vector2(5.11285, 0.411177)
+texture = ExtResource("2_1410t")
+metadata/_edit_lock_ = true
+
+[node name="BottomDarkness" type="ColorRect" parent="Foreground/Ground"]
+offset_left = -4617.0
+offset_top = 1178.0
+offset_right = 1923.0
+offset_bottom = 1230.0
+scale = Vector2(1, 21.16)
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Foreground/Ground"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foreground/Ground/StaticBody2D"]
+position = Vector2(0, 979)
+shape = SubResource("WorldBoundaryShape2D_gvv6p")
