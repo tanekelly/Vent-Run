@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dhpp2rwhh56y0"]
 
-[ext_resource type="Shader" uid="uid://cf4pgo2utcpjj" path="res://Assets/Shaders/Shadows/DropShadow/drop_shadow.gdshader" id="1_opjrr"]
+[ext_resource type="Shader" uid="uid://cf4pgo2utcpjj" path="res://Assets/Shaders/DropShadow/drop_shadow.gdshader" id="1_opjrr"]
 
 [resource]
 shader = ExtResource("1_opjrr")

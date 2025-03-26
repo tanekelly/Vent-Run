@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://dibpj5ixgxfvr"]
+[gd_scene load_steps=80 format=3 uid="uid://dibpj5ixgxfvr"]
 
 [ext_resource type="Texture2D" uid="uid://e4qmpcl1p0cw" path="res://Stages/LevelB/Assets/Art/Distant/ceiling.png" id="1_5l77a"]
 [ext_resource type="Texture2D" uid="uid://xcutva6bf22r" path="res://Stages/LevelB/Assets/Art/Distant/wainscoting.png" id="1_1410t"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bfjsiorrhiy8s" path="res://Entities/Player/reference_controller.tscn" id="3_gvv6p"]
 [ext_resource type="Texture2D" uid="uid://dea8lnbfgk5k7" path="res://Stages/LevelB/Assets/Art/Distant/ground.png" id="3_r4pgn"]
 [ext_resource type="Texture2D" uid="uid://gu8a8yfxd04l" path="res://Stages/LevelB/Assets/Art/Decorations/alarm.png" id="4_jqubx"]
+[ext_resource type="Shader" uid="uid://do2513njjmcgo" path="res://Assets/Shaders/Blur/blur.gdshader" id="4_wnmdb"]
 [ext_resource type="Texture2D" uid="uid://27aemcx1gj0a" path="res://Stages/LevelB/Assets/Art/Decorations/bike1.png" id="6_7uvhj"]
 [ext_resource type="Texture2D" uid="uid://c3h42ilp08mjw" path="res://Stages/LevelB/Assets/Art/Decorations/Paintings/floor-paintings.png" id="7_4ujho"]
 [ext_resource type="Texture2D" uid="uid://epj01v8xqyao" path="res://Stages/LevelB/Assets/Art/Decorations/Paintings/painting1.png" id="8_0yosl"]
@@ -20,91 +21,10 @@
 [ext_resource type="Texture2D" uid="uid://vsr0ljjlxpti" path="res://Stages/LevelB/Assets/Art/Instruments/acoguitar1.png" id="12_w1a4a"]
 [ext_resource type="Texture2D" uid="uid://bjh4j031bd03r" path="res://Stages/LevelB/Assets/Art/Lights/lights.png" id="14_850el"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jqubx"]
-atlas = ExtResource("3_bquq3")
-region = Rect2(0, 0, 989, 2387)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ld1fv"]
-atlas = ExtResource("3_bquq3")
-region = Rect2(989, 0, 989, 2387)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7uvhj"]
-atlas = ExtResource("3_bquq3")
-region = Rect2(1978, 0, 989, 2387)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4ujho"]
-atlas = ExtResource("3_bquq3")
-region = Rect2(2967, 0, 989, 2387)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0r13l"]
-atlas = ExtResource("3_bquq3")
-region = Rect2(3956, 0, 989, 2387)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_wqvtv"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jqubx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ld1fv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7uvhj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4ujho")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0r13l")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wqvtv"]
-atlas = ExtResource("4_jqubx")
-region = Rect2(0, 0, 267, 869)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0yosl"]
-atlas = ExtResource("4_jqubx")
-region = Rect2(267, 0, 267, 869)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nuvul"]
-atlas = ExtResource("4_jqubx")
-region = Rect2(534, 0, 267, 869)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w1a4a"]
-atlas = ExtResource("4_jqubx")
-region = Rect2(801, 0, 267, 869)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ivast"]
-atlas = ExtResource("4_jqubx")
-region = Rect2(1068, 0, 267, 869)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_850el"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wqvtv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0yosl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nuvul")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_w1a4a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ivast")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6u7fy"]
+shader = ExtResource("4_wnmdb")
+shader_parameter/blur_amount = 5.0
+shader_parameter/modulate_color = Color(0, 0, 0, 0.188235)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_850el"]
 atlas = ExtResource("6_7uvhj")
@@ -148,6 +68,11 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wnmdb"]
+shader = ExtResource("4_wnmdb")
+shader_parameter/blur_amount = 5.0
+shader_parameter/modulate_color = Color(0, 0, 0, 0.188235)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8844c"]
 atlas = ExtResource("7_4ujho")
@@ -423,6 +348,92 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqubx"]
+atlas = ExtResource("3_bquq3")
+region = Rect2(0, 0, 989, 2387)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ld1fv"]
+atlas = ExtResource("3_bquq3")
+region = Rect2(989, 0, 989, 2387)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7uvhj"]
+atlas = ExtResource("3_bquq3")
+region = Rect2(1978, 0, 989, 2387)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ujho"]
+atlas = ExtResource("3_bquq3")
+region = Rect2(2967, 0, 989, 2387)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0r13l"]
+atlas = ExtResource("3_bquq3")
+region = Rect2(3956, 0, 989, 2387)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wqvtv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqubx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ld1fv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7uvhj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ujho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0r13l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqvtv"]
+atlas = ExtResource("4_jqubx")
+region = Rect2(0, 0, 267, 869)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yosl"]
+atlas = ExtResource("4_jqubx")
+region = Rect2(267, 0, 267, 869)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nuvul"]
+atlas = ExtResource("4_jqubx")
+region = Rect2(534, 0, 267, 869)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1a4a"]
+atlas = ExtResource("4_jqubx")
+region = Rect2(801, 0, 267, 869)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivast"]
+atlas = ExtResource("4_jqubx")
+region = Rect2(1068, 0, 267, 869)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_850el"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqvtv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yosl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nuvul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1a4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivast")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gvv6p"]
 
 [node name="LevelB" type="Node2D"]
@@ -497,11 +508,80 @@ metadata/_edit_lock_ = true
 [node name="Background" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
 
-[node name="EntranceDoor" type="Node2D" parent="Background"]
+[node name="LowObjectGroupOne" type="Node2D" parent="Background"]
+position = Vector2(1470, 884)
+metadata/_edit_lock_ = true
+
+[node name="BikeOne" type="Node2D" parent="Background/LowObjectGroupOne"]
+
+[node name="Shadow2D" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/BikeOne"]
+material = SubResource("ShaderMaterial_6u7fy")
+position = Vector2(14, 4)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_8844c")
+
+[node name="BikeOne_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/BikeOne"]
+position = Vector2(5, 1)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_8844c")
+
+[node name="FloorPaintings" type="Node2D" parent="Background/LowObjectGroupOne"]
+
+[node name="Shadow2D" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/FloorPaintings"]
+material = SubResource("ShaderMaterial_wnmdb")
+position = Vector2(145, 2.99999)
+scale = Vector2(0.28, 0.2)
+sprite_frames = SubResource("SpriteFrames_i0fqr")
+
+[node name="FloorPaintings_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/FloorPaintings"]
+position = Vector2(133, 6)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_i0fqr")
+
+[node name="PaintingOne_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
+position = Vector2(-57, -186)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_p1m6a")
+
+[node name="PaintingTwo_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
+position = Vector2(-348, -200)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_nwi5m")
+
+[node name="PaintingThree_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
+position = Vector2(-603, -192)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_bpfak")
+
+[node name="Boots_AnimTwo" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
+position = Vector2(-622, 79)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_sl5uh")
+
+[node name="Shelf1_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
+position = Vector2(-751, -17)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_gc72n")
+
+[node name="AcoGuitar_AnimTwo" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
+position = Vector2(-853, 15)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_dsq2s")
+
+[node name="HighObjectGroupOne" type="Node2D" parent="Background"]
+position = Vector2(1767, 570)
+
+[node name="RoofLight1_AnimTwo" type="AnimatedSprite2D" parent="Background/HighObjectGroupOne"]
+position = Vector2(-805, -441)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_ivast")
+frame_progress = 0.126516
+
+[node name="EntranceDoor" type="Node2D" parent="."]
 position = Vector2(1767, 570)
 metadata/_edit_lock_ = true
 
-[node name="Block" type="NinePatchRect" parent="Background/EntranceDoor"]
+[node name="Block" type="NinePatchRect" parent="EntranceDoor"]
 offset_left = -149.0
 offset_top = -475.0
 offset_right = 1401.0
@@ -514,7 +594,7 @@ patch_margin_right = 47
 patch_margin_bottom = 49
 metadata/_edit_lock_ = true
 
-[node name="EntranceDoor_Anim" type="AnimatedSprite2D" parent="Background/EntranceDoor"]
+[node name="EntranceDoor_Anim" type="AnimatedSprite2D" parent="EntranceDoor"]
 position = Vector2(-20.9999, 181)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_wqvtv")
@@ -522,75 +602,14 @@ frame = 4
 frame_progress = 0.552584
 metadata/_edit_lock_ = true
 
-[node name="Alarm_Anim" type="AnimatedSprite2D" parent="Background/EntranceDoor"]
+[node name="Alarm_Anim" type="AnimatedSprite2D" parent="EntranceDoor"]
 position = Vector2(117, 168)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_850el")
 metadata/_edit_lock_ = true
 
-[node name="LowObjectGroupOne" type="Node2D" parent="Background"]
-position = Vector2(1470, 884)
-metadata/_edit_lock_ = true
-
-[node name="BikeOne_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
-position = Vector2(5, 1)
-scale = Vector2(0.2, 0.2)
-sprite_frames = SubResource("SpriteFrames_8844c")
-metadata/_edit_lock_ = true
-
-[node name="FloorPaintings_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
-position = Vector2(133, 6)
-scale = Vector2(0.2, 0.2)
-sprite_frames = SubResource("SpriteFrames_i0fqr")
-metadata/_edit_lock_ = true
-
-[node name="PaintingOne_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
-position = Vector2(-57, -186)
-scale = Vector2(0.2, 0.2)
-sprite_frames = SubResource("SpriteFrames_p1m6a")
-metadata/_edit_lock_ = true
-
-[node name="PaintingTwo_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
-position = Vector2(-348, -200)
-scale = Vector2(0.2, 0.2)
-sprite_frames = SubResource("SpriteFrames_nwi5m")
-metadata/_edit_lock_ = true
-
-[node name="PaintingThree_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
-position = Vector2(-603, -192)
-scale = Vector2(0.2, 0.2)
-sprite_frames = SubResource("SpriteFrames_bpfak")
-metadata/_edit_lock_ = true
-
-[node name="Boots_AnimTwo" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
-position = Vector2(-622, 79)
-scale = Vector2(0.2, 0.2)
-sprite_frames = SubResource("SpriteFrames_sl5uh")
-metadata/_edit_lock_ = true
-
-[node name="Shelf1_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
-position = Vector2(-751, -17)
-scale = Vector2(0.2, 0.2)
-sprite_frames = SubResource("SpriteFrames_gc72n")
-metadata/_edit_lock_ = true
-
-[node name="AcoGuitar_AnimTwo" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
-position = Vector2(-853, 15)
-scale = Vector2(0.2, 0.2)
-sprite_frames = SubResource("SpriteFrames_dsq2s")
-metadata/_edit_lock_ = true
-
-[node name="HighObjectGroupOne" type="Node2D" parent="Background"]
-position = Vector2(1767, 570)
-
-[node name="RoofLight1_AnimTwo" type="AnimatedSprite2D" parent="Background/HighObjectGroupOne"]
-position = Vector2(-805, -441)
-scale = Vector2(0.15, 0.15)
-sprite_frames = SubResource("SpriteFrames_ivast")
-frame_progress = 0.126516
-
 [node name="ControllerReference" parent="." instance=ExtResource("3_gvv6p")]
-position = Vector2(1110, 868)
+position = Vector2(2118, 886)
 
 [node name="Foreground" type="Node2D" parent="."]
 metadata/_edit_lock_ = true

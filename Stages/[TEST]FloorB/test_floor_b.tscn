@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dg61aqrgi0g21" path="res://Stages/[TEST]FloorB/Resources/Block.tscn" id="3_n8vnx"]
 [ext_resource type="Texture2D" uid="uid://b31tfwo77yfw3" path="res://Stages/LevelB/Assets/Art/Doors/door1.png" id="4_2o6ue"]
 [ext_resource type="Texture2D" uid="uid://gu8a8yfxd04l" path="res://Stages/LevelB/Assets/Art/Decorations/alarm.png" id="5_oik4o"]
-[ext_resource type="Material" uid="uid://dhpp2rwhh56y0" path="res://Assets/Shaders/Shadows/DropShadow/drop_shadow.tres" id="6_26vps"]
+[ext_resource type="Material" uid="uid://dhpp2rwhh56y0" path="res://Assets/Shaders/DropShadow/drop_shadow.tres" id="6_26vps"]
 [ext_resource type="Texture2D" uid="uid://27aemcx1gj0a" path="res://Stages/LevelB/Assets/Art/Decorations/bike1.png" id="7_w7wvf"]
 [ext_resource type="Texture2D" uid="uid://c3h42ilp08mjw" path="res://Stages/LevelB/Assets/Art/Decorations/Paintings/floor-paintings.png" id="8_r0ma6"]
 [ext_resource type="Texture2D" uid="uid://blfh6s1jw0o7x" path="res://Stages/LevelB/Assets/Art/Decorations/Paintings/painting2.png" id="9_ibqyo"]
