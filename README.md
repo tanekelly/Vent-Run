@@ -1,5 +1,7 @@
 # Vent Run
 
+A 2D platformer made in Godot
+
 An evil smoke from the vent is making the residents of 6 Halley's Lane go crazy. It's your job to descend the floors of the complex and beat them to their senses to save the day.
 
 ## Game Ideas
