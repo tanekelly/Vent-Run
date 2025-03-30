@@ -351,28 +351,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sl5uh"]
-atlas = ExtResource("14_850el")
-region = Rect2(0, 0, 759, 4346)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2m5ip"]
-atlas = ExtResource("14_850el")
-region = Rect2(759, 0, 759, 4346)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ivast"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sl5uh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2m5ip")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_jqubx"]
 atlas = ExtResource("3_bquq3")
 region = Rect2(0, 0, 989, 2387)
@@ -459,13 +437,32 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_sl5uh"]
+atlas = ExtResource("14_850el")
+region = Rect2(0, 0, 759, 4346)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2m5ip"]
+atlas = ExtResource("14_850el")
+region = Rect2(759, 0, 759, 4346)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ivast"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sl5uh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2m5ip")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gvv6p"]
 
 [node name="LevelB" type="Node2D"]
 script = ExtResource("1_ld1fv")
-
-[node name="AnimationLogic" type="Node" parent="."]
-script = ExtResource("2_d4tyl")
 
 [node name="Distant" type="Node2D" parent="."]
 z_index = -1
@@ -539,7 +536,7 @@ metadata/_edit_lock_ = true
 
 [node name="BikeOne" type="Node2D" parent="Background/LowObjectGroupOne"]
 
-[node name="Shadow2D" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/BikeOne"]
+[node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/BikeOne"]
 material = SubResource("ShaderMaterial_6u7fy")
 position = Vector2(14, 4)
 scale = Vector2(0.2, 0.2)
@@ -552,7 +549,7 @@ sprite_frames = SubResource("SpriteFrames_8844c")
 
 [node name="FloorPaintings" type="Node2D" parent="Background/LowObjectGroupOne"]
 
-[node name="Shadow2D" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/FloorPaintings"]
+[node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/FloorPaintings"]
 material = SubResource("ShaderMaterial_wnmdb")
 position = Vector2(145, 2.99999)
 scale = Vector2(0.28, 0.2)
@@ -565,7 +562,7 @@ sprite_frames = SubResource("SpriteFrames_i0fqr")
 
 [node name="PaintingOne" type="Node2D" parent="Background/LowObjectGroupOne"]
 
-[node name="Shadow2D" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingOne"]
+[node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingOne"]
 material = SubResource("ShaderMaterial_56ype")
 position = Vector2(-52, -181)
 scale = Vector2(0.2, 0.2)
@@ -578,7 +575,7 @@ sprite_frames = SubResource("SpriteFrames_p1m6a")
 
 [node name="PaintingTwo" type="Node2D" parent="Background/LowObjectGroupOne"]
 
-[node name="Shadow2D" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingTwo"]
+[node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingTwo"]
 material = SubResource("ShaderMaterial_8844c")
 position = Vector2(-346, -196)
 scale = Vector2(0.2, 0.2)
@@ -591,7 +588,7 @@ sprite_frames = SubResource("SpriteFrames_nwi5m")
 
 [node name="PaintingThree" type="Node2D" parent="Background/LowObjectGroupOne"]
 
-[node name="Shadow2D" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingThree"]
+[node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingThree"]
 material = SubResource("ShaderMaterial_fhs48")
 position = Vector2(-606, -188)
 scale = Vector2(0.2, 0.2)
@@ -611,7 +608,7 @@ sprite_frames = SubResource("SpriteFrames_sl5uh")
 
 [node name="Shelf" type="Node2D" parent="Background/LowObjectGroupOne"]
 
-[node name="Shadow2D" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/Shelf"]
+[node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/Shelf"]
 material = SubResource("ShaderMaterial_ah1kp")
 position = Vector2(-758, -12)
 scale = Vector2(0.2, 0.2)
@@ -624,7 +621,7 @@ sprite_frames = SubResource("SpriteFrames_gc72n")
 
 [node name="Aco Guitar" type="Node2D" parent="Background/LowObjectGroupOne"]
 
-[node name="Shadow2D" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/Aco Guitar"]
+[node name="Shadow2D_AnimTwo" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/Aco Guitar"]
 material = SubResource("ShaderMaterial_mg3nr")
 position = Vector2(-860, 18)
 scale = Vector2(0.2, 0.2)
@@ -635,20 +632,11 @@ position = Vector2(-853, 15)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_dsq2s")
 
-[node name="HighObjectGroupOne" type="Node2D" parent="Background"]
-position = Vector2(1767, 570)
-
-[node name="RoofLight1_AnimTwo" type="AnimatedSprite2D" parent="Background/HighObjectGroupOne"]
-position = Vector2(-805, -441)
-scale = Vector2(0.15, 0.15)
-sprite_frames = SubResource("SpriteFrames_ivast")
-frame_progress = 0.126516
-
-[node name="EntranceDoor" type="Node2D" parent="."]
+[node name="EntranceDoor" type="Node2D" parent="Background"]
 position = Vector2(1767, 570)
 metadata/_edit_lock_ = true
 
-[node name="Block" type="NinePatchRect" parent="EntranceDoor"]
+[node name="Block" type="NinePatchRect" parent="Background/EntranceDoor"]
 offset_left = -149.0
 offset_top = -475.0
 offset_right = 1401.0
@@ -661,7 +649,7 @@ patch_margin_right = 47
 patch_margin_bottom = 49
 metadata/_edit_lock_ = true
 
-[node name="EntranceDoor_Anim" type="AnimatedSprite2D" parent="EntranceDoor"]
+[node name="EntranceDoor_Anim" type="AnimatedSprite2D" parent="Background/EntranceDoor"]
 position = Vector2(-20.9999, 181)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_wqvtv")
@@ -669,14 +657,23 @@ frame = 4
 frame_progress = 0.552584
 metadata/_edit_lock_ = true
 
-[node name="Alarm_Anim" type="AnimatedSprite2D" parent="EntranceDoor"]
+[node name="Alarm_Anim" type="AnimatedSprite2D" parent="Background/EntranceDoor"]
 position = Vector2(117, 168)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_850el")
 metadata/_edit_lock_ = true
 
+[node name="HighObjectGroupOne" type="Node2D" parent="Background"]
+position = Vector2(1767, 570)
+
+[node name="RoofLight1_AnimTwo" type="AnimatedSprite2D" parent="Background/HighObjectGroupOne"]
+position = Vector2(-805, -441)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_ivast")
+frame_progress = 0.126516
+
 [node name="Player" parent="." instance=ExtResource("17_wnmdb")]
-position = Vector2(1713, 858)
+position = Vector2(1747, 723)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 offset = Vector2(0, -300)
@@ -689,7 +686,7 @@ drag_vertical_enabled = true
 drag_left_margin = 0.1
 drag_top_margin = 0.6
 drag_right_margin = 0.1
-drag_bottom_margin = 0.4
+drag_bottom_margin = 0.0
 
 [node name="Foreground" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
@@ -749,3 +746,6 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Foreground/Ground/StaticBody2D"]
 position = Vector2(0, 979)
 shape = SubResource("WorldBoundaryShape2D_gvv6p")
+
+[node name="AnimationLogic" type="Node" parent="."]
+script = ExtResource("2_d4tyl")
