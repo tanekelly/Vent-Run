@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=3 uid="uid://dibpj5ixgxfvr"]
+[gd_scene load_steps=122 format=3 uid="uid://dibpj5ixgxfvr"]
 
 [ext_resource type="Texture2D" uid="uid://e4qmpcl1p0cw" path="res://Stages/LevelB/Assets/Art/Distant/ceiling.png" id="1_5l77a"]
 [ext_resource type="Texture2D" uid="uid://xcutva6bf22r" path="res://Stages/LevelB/Assets/Art/Distant/wainscoting.png" id="1_1410t"]
@@ -20,7 +20,12 @@
 [ext_resource type="Texture2D" uid="uid://vsr0ljjlxpti" path="res://Stages/LevelB/Assets/Art/Instruments/acoguitar1.png" id="12_w1a4a"]
 [ext_resource type="Texture2D" uid="uid://bjh4j031bd03r" path="res://Stages/LevelB/Assets/Art/Lights/lights.png" id="14_850el"]
 [ext_resource type="Texture2D" uid="uid://c214ssfut62op" path="res://Assets/Art/spotlight.jpg" id="15_6u7fy"]
+[ext_resource type="Texture2D" uid="uid://bbyoyebow022m" path="res://Stages/LevelB/Assets/Art/Doors/door2.png" id="17_56ype"]
 [ext_resource type="PackedScene" uid="uid://iex2rhndw1rh" path="res://Entities/Player/player.tscn" id="17_wnmdb"]
+[ext_resource type="Texture2D" uid="uid://bxm0pidt6oto2" path="res://Stages/LevelB/Assets/Art/Decorations/Paintings/painting4.png" id="18_8844c"]
+[ext_resource type="Texture2D" uid="uid://c7rlulvt75nsd" path="res://Stages/LevelB/Assets/Art/Signs/sign-tane.png" id="18_ah1kp"]
+[ext_resource type="Texture2D" uid="uid://dnoc8b20ywxvo" path="res://Stages/LevelB/Assets/Art/Instruments/acobass.png" id="19_fhs48"]
+[ext_resource type="Texture2D" uid="uid://bryrl21nth7hn" path="res://Stages/LevelB/Assets/Art/Decorations/Paintings/painting5.png" id="21_mg3nr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6u7fy"]
 shader = ExtResource("4_wnmdb")
@@ -465,6 +470,215 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_yigu4"]
+atlas = ExtResource("17_56ype")
+region = Rect2(0, 0, 922, 1633)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ep6q"]
+atlas = ExtResource("17_56ype")
+region = Rect2(922, 0, 922, 1633)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dj6hg"]
+atlas = ExtResource("17_56ype")
+region = Rect2(1844, 0, 922, 1633)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4j23"]
+atlas = ExtResource("17_56ype")
+region = Rect2(2766, 0, 922, 1633)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uyu68"]
+atlas = ExtResource("17_56ype")
+region = Rect2(3688, 0, 922, 1633)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hi33r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yigu4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ep6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dj6hg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4j23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uyu68")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjh8p"]
+atlas = ExtResource("18_ah1kp")
+region = Rect2(0, 0, 564, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ow0p7"]
+atlas = ExtResource("18_ah1kp")
+region = Rect2(564, 0, 564, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgy20"]
+atlas = ExtResource("18_ah1kp")
+region = Rect2(1128, 0, 564, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rm5h3"]
+atlas = ExtResource("18_ah1kp")
+region = Rect2(1692, 0, 564, 423)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pq6i1"]
+atlas = ExtResource("18_ah1kp")
+region = Rect2(2256, 0, 564, 423)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iqslu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjh8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ow0p7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cgy20")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rm5h3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pq6i1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u53c4"]
+shader = ExtResource("4_wnmdb")
+shader_parameter/blur_amount = 5.0
+shader_parameter/modulate_color = Color(0, 0, 0, 0.188235)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpt6k"]
+atlas = ExtResource("18_8844c")
+region = Rect2(0, 0, 406, 622)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g61r2"]
+atlas = ExtResource("18_8844c")
+region = Rect2(406, 0, 406, 622)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76itv"]
+atlas = ExtResource("18_8844c")
+region = Rect2(812, 0, 406, 622)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abnvv"]
+atlas = ExtResource("18_8844c")
+region = Rect2(1218, 0, 406, 622)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hi33r"]
+atlas = ExtResource("18_8844c")
+region = Rect2(1624, 0, 406, 622)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ep6q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpt6k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g61r2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76itv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abnvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hi33r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0vqi3"]
+shader = ExtResource("4_wnmdb")
+shader_parameter/blur_amount = 5.0
+shader_parameter/modulate_color = Color(0, 0, 0, 0.188235)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikh2c"]
+atlas = ExtResource("19_fhs48")
+region = Rect2(0, 0, 1890, 701)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilm3t"]
+atlas = ExtResource("19_fhs48")
+region = Rect2(1890, 0, 1890, 701)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qjh8p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikh2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilm3t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jdoge"]
+shader = ExtResource("4_wnmdb")
+shader_parameter/blur_amount = 5.0
+shader_parameter/modulate_color = Color(0, 0, 0, 0.188235)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqslu"]
+atlas = ExtResource("21_mg3nr")
+region = Rect2(0, 0, 511, 525)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hk4nk"]
+atlas = ExtResource("21_mg3nr")
+region = Rect2(511, 0, 511, 525)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxbqs"]
+atlas = ExtResource("21_mg3nr")
+region = Rect2(1022, 0, 511, 525)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8w6j0"]
+atlas = ExtResource("21_mg3nr")
+region = Rect2(1533, 0, 511, 525)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_312js"]
+atlas = ExtResource("21_mg3nr")
+region = Rect2(2044, 0, 511, 525)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p12ou"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqslu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hk4nk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxbqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8w6j0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_312js")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gvv6p"]
 
 [node name="LevelB" type="Node2D"]
@@ -571,49 +785,49 @@ scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_i0fqr")
 metadata/_edit_lock_ = true
 
-[node name="PaintingOne" type="Node2D" parent="Background/LowObjectGroupOne"]
+[node name="PaintingStream" type="Node2D" parent="Background/LowObjectGroupOne"]
 metadata/_edit_lock_ = true
 
-[node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingOne"]
+[node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingStream"]
 material = SubResource("ShaderMaterial_56ype")
 position = Vector2(-52, -181)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_p1m6a")
 metadata/_edit_lock_ = true
 
-[node name="PaintingOne_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingOne"]
+[node name="PaintingOne_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingStream"]
 position = Vector2(-57, -186)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_p1m6a")
 metadata/_edit_lock_ = true
 
-[node name="PaintingTwo" type="Node2D" parent="Background/LowObjectGroupOne"]
+[node name="PaintingColors" type="Node2D" parent="Background/LowObjectGroupOne"]
 metadata/_edit_lock_ = true
 
-[node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingTwo"]
+[node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingColors"]
 material = SubResource("ShaderMaterial_8844c")
-position = Vector2(-343, -199)
+position = Vector2(-344, -196)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_nwi5m")
 metadata/_edit_lock_ = true
 
-[node name="PaintingTwo_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingTwo"]
+[node name="PaintingTwo_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingColors"]
 position = Vector2(-348, -200)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_nwi5m")
 metadata/_edit_lock_ = true
 
-[node name="PaintingThree" type="Node2D" parent="Background/LowObjectGroupOne"]
+[node name="PaintingFlower" type="Node2D" parent="Background/LowObjectGroupOne"]
 metadata/_edit_lock_ = true
 
-[node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingThree"]
+[node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingFlower"]
 material = SubResource("ShaderMaterial_fhs48")
 position = Vector2(-609, -185)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_bpfak")
 metadata/_edit_lock_ = true
 
-[node name="PaintingThree_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingThree"]
+[node name="PaintingThree_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingFlower"]
 position = Vector2(-603, -192)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_bpfak")
@@ -660,11 +874,11 @@ scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_dsq2s")
 metadata/_edit_lock_ = true
 
-[node name="EntranceDoor" type="Node2D" parent="Background"]
-position = Vector2(1767, 570)
+[node name="EntranceDoor" type="Node2D" parent="Background/LowObjectGroupOne"]
+position = Vector2(297, -314)
 metadata/_edit_lock_ = true
 
-[node name="Block" type="NinePatchRect" parent="Background/EntranceDoor"]
+[node name="Block" type="NinePatchRect" parent="Background/LowObjectGroupOne/EntranceDoor"]
 offset_left = -149.0
 offset_top = -475.0
 offset_right = 1401.0
@@ -677,7 +891,7 @@ patch_margin_right = 47
 patch_margin_bottom = 49
 metadata/_edit_lock_ = true
 
-[node name="EntranceDoor_Anim" type="AnimatedSprite2D" parent="Background/EntranceDoor"]
+[node name="EntranceDoor_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/EntranceDoor"]
 position = Vector2(-20.9999, 181)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_wqvtv")
@@ -685,7 +899,7 @@ frame = 4
 frame_progress = 0.552584
 metadata/_edit_lock_ = true
 
-[node name="Alarm_Anim" type="AnimatedSprite2D" parent="Background/EntranceDoor"]
+[node name="Alarm_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/EntranceDoor"]
 position = Vector2(117, 168)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_850el")
@@ -720,6 +934,73 @@ scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_ivast")
 frame_progress = 0.126516
 metadata/_edit_lock_ = true
+
+[node name="LowObjectsGroupTwo" type="Node2D" parent="Background"]
+
+[node name="TaneDoor" type="Node2D" parent="Background/LowObjectsGroupTwo"]
+metadata/_edit_lock_ = true
+
+[node name="TaneDoor_Anim" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/TaneDoor"]
+position = Vector2(398, 822)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_hi33r")
+metadata/_edit_lock_ = true
+
+[node name="TaneSign" type="Node2D" parent="Background/LowObjectsGroupTwo"]
+metadata/_edit_lock_ = true
+
+[node name="TaneSign_Anim" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/TaneSign"]
+position = Vector2(398, 612)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_iqslu")
+
+[node name="PaintingBen" type="Node2D" parent="Background/LowObjectsGroupTwo"]
+metadata/_edit_lock_ = true
+
+[node name="Shadow2D" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/PaintingBen"]
+material = SubResource("ShaderMaterial_u53c4")
+position = Vector2(579, 719)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_2ep6q")
+metadata/_edit_lock_ = true
+
+[node name="PaintingBen_Anim" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/PaintingBen"]
+position = Vector2(583, 714)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_2ep6q")
+metadata/_edit_lock_ = true
+
+[node name="DoubleBass" type="Node2D" parent="Background/LowObjectsGroupTwo"]
+
+[node name="Shadow2D" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/DoubleBass"]
+material = SubResource("ShaderMaterial_0vqi3")
+position = Vector2(75, 921)
+rotation = -0.0364218
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_qjh8p")
+frame_progress = 0.908646
+
+[node name="DoubleBass_AnimTwo" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/DoubleBass"]
+position = Vector2(75, 917)
+rotation = -0.0364218
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_qjh8p")
+frame_progress = 0.908646
+
+[node name="PolaroidPhotosOne" type="Node2D" parent="Background/LowObjectsGroupTwo"]
+
+[node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/PolaroidPhotosOne"]
+material = SubResource("ShaderMaterial_jdoge")
+position = Vector2(213, 767)
+rotation = -0.0364218
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_p12ou")
+
+[node name="PolaroidPhotosOne_Anim" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/PolaroidPhotosOne"]
+position = Vector2(213, 763)
+rotation = -0.0364218
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_p12ou")
 
 [node name="Player" parent="." instance=ExtResource("17_wnmdb")]
 position = Vector2(1747, 723)
