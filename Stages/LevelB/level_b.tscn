@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://dibpj5ixgxfvr"]
+[gd_scene load_steps=87 format=3 uid="uid://dibpj5ixgxfvr"]
 
 [ext_resource type="Texture2D" uid="uid://e4qmpcl1p0cw" path="res://Stages/LevelB/Assets/Art/Distant/ceiling.png" id="1_5l77a"]
 [ext_resource type="Texture2D" uid="uid://xcutva6bf22r" path="res://Stages/LevelB/Assets/Art/Distant/wainscoting.png" id="1_1410t"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://xn84njegain7" path="res://Stages/LevelB/Assets/Art/Decorations/shelf1.png" id="11_nuvul"]
 [ext_resource type="Texture2D" uid="uid://vsr0ljjlxpti" path="res://Stages/LevelB/Assets/Art/Instruments/acoguitar1.png" id="12_w1a4a"]
 [ext_resource type="Texture2D" uid="uid://bjh4j031bd03r" path="res://Stages/LevelB/Assets/Art/Lights/lights.png" id="14_850el"]
+[ext_resource type="Texture2D" uid="uid://c214ssfut62op" path="res://Assets/Art/spotlight.jpg" id="15_6u7fy"]
 [ext_resource type="PackedScene" uid="uid://iex2rhndw1rh" path="res://Entities/Player/player.tscn" id="17_wnmdb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6u7fy"]
@@ -437,6 +438,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i0fqr"]
+shader = ExtResource("4_wnmdb")
+shader_parameter/blur_amount = 10.0
+shader_parameter/modulate_color = Color(0, 0, 0, 0.188235)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_sl5uh"]
 atlas = ExtResource("14_850el")
 region = Rect2(0, 0, 759, 4346)
@@ -535,102 +541,125 @@ position = Vector2(1470, 884)
 metadata/_edit_lock_ = true
 
 [node name="BikeOne" type="Node2D" parent="Background/LowObjectGroupOne"]
+metadata/_edit_lock_ = true
 
 [node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/BikeOne"]
 material = SubResource("ShaderMaterial_6u7fy")
 position = Vector2(14, 4)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_8844c")
+metadata/_edit_lock_ = true
 
 [node name="BikeOne_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/BikeOne"]
 position = Vector2(5, 1)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_8844c")
+metadata/_edit_lock_ = true
 
 [node name="FloorPaintings" type="Node2D" parent="Background/LowObjectGroupOne"]
+metadata/_edit_lock_ = true
 
 [node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/FloorPaintings"]
 material = SubResource("ShaderMaterial_wnmdb")
 position = Vector2(145, 2.99999)
 scale = Vector2(0.28, 0.2)
 sprite_frames = SubResource("SpriteFrames_i0fqr")
+metadata/_edit_lock_ = true
 
 [node name="FloorPaintings_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/FloorPaintings"]
 position = Vector2(133, 6)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_i0fqr")
+metadata/_edit_lock_ = true
 
 [node name="PaintingOne" type="Node2D" parent="Background/LowObjectGroupOne"]
+metadata/_edit_lock_ = true
 
 [node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingOne"]
 material = SubResource("ShaderMaterial_56ype")
 position = Vector2(-52, -181)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_p1m6a")
+metadata/_edit_lock_ = true
 
 [node name="PaintingOne_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingOne"]
 position = Vector2(-57, -186)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_p1m6a")
+metadata/_edit_lock_ = true
 
 [node name="PaintingTwo" type="Node2D" parent="Background/LowObjectGroupOne"]
+metadata/_edit_lock_ = true
 
 [node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingTwo"]
 material = SubResource("ShaderMaterial_8844c")
-position = Vector2(-346, -196)
+position = Vector2(-343, -199)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_nwi5m")
+metadata/_edit_lock_ = true
 
 [node name="PaintingTwo_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingTwo"]
 position = Vector2(-348, -200)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_nwi5m")
+metadata/_edit_lock_ = true
 
 [node name="PaintingThree" type="Node2D" parent="Background/LowObjectGroupOne"]
+metadata/_edit_lock_ = true
 
 [node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingThree"]
 material = SubResource("ShaderMaterial_fhs48")
-position = Vector2(-606, -188)
+position = Vector2(-609, -185)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_bpfak")
+metadata/_edit_lock_ = true
 
 [node name="PaintingThree_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingThree"]
 position = Vector2(-603, -192)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_bpfak")
+metadata/_edit_lock_ = true
 
 [node name="Boots" type="Node2D" parent="Background/LowObjectGroupOne"]
+metadata/_edit_lock_ = true
 
 [node name="Boots_AnimTwo" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/Boots"]
 position = Vector2(-622, 79)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_sl5uh")
+metadata/_edit_lock_ = true
 
 [node name="Shelf" type="Node2D" parent="Background/LowObjectGroupOne"]
+metadata/_edit_lock_ = true
 
 [node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/Shelf"]
 material = SubResource("ShaderMaterial_ah1kp")
 position = Vector2(-758, -12)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_gc72n")
+metadata/_edit_lock_ = true
 
 [node name="Shelf1_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/Shelf"]
 position = Vector2(-751, -17)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_gc72n")
+metadata/_edit_lock_ = true
 
 [node name="Aco Guitar" type="Node2D" parent="Background/LowObjectGroupOne"]
+metadata/_edit_lock_ = true
 
 [node name="Shadow2D_AnimTwo" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/Aco Guitar"]
 material = SubResource("ShaderMaterial_mg3nr")
 position = Vector2(-860, 18)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_dsq2s")
+metadata/_edit_lock_ = true
 
 [node name="AcoGuitar_AnimTwo" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/Aco Guitar"]
 position = Vector2(-853, 15)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_dsq2s")
+metadata/_edit_lock_ = true
 
 [node name="EntranceDoor" type="Node2D" parent="Background"]
 position = Vector2(1767, 570)
@@ -666,11 +695,31 @@ metadata/_edit_lock_ = true
 [node name="HighObjectGroupOne" type="Node2D" parent="Background"]
 position = Vector2(1767, 570)
 
-[node name="RoofLight1_AnimTwo" type="AnimatedSprite2D" parent="Background/HighObjectGroupOne"]
+[node name="RoofLight1" type="Node2D" parent="Background/HighObjectGroupOne"]
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="Background/HighObjectGroupOne/RoofLight1"]
+position = Vector2(-802, 133)
+scale = Vector2(2.15059, 1.06747)
+color = Color(0.978256, 0.967602, 7.70092e-07, 1)
+energy = 0.1
+texture = ExtResource("15_6u7fy")
+metadata/_edit_lock_ = true
+
+[node name="Shadow2D_AnimTwo" type="AnimatedSprite2D" parent="Background/HighObjectGroupOne/RoofLight1"]
+material = SubResource("ShaderMaterial_i0fqr")
+position = Vector2(-805, -447)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_ivast")
+frame_progress = 0.126516
+metadata/_edit_lock_ = true
+
+[node name="RoofLight1_AnimTwo" type="AnimatedSprite2D" parent="Background/HighObjectGroupOne/RoofLight1"]
 position = Vector2(-805, -441)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_ivast")
 frame_progress = 0.126516
+metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("17_wnmdb")]
 position = Vector2(1747, 723)
