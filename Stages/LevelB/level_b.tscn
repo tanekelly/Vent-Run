@@ -548,7 +548,6 @@ material = SubResource("ShaderMaterial_6u7fy")
 position = Vector2(14, 4)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_8844c")
-metadata/_edit_lock_ = true
 
 [node name="BikeOne_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/BikeOne"]
 position = Vector2(5, 1)
@@ -694,12 +693,13 @@ metadata/_edit_lock_ = true
 
 [node name="HighObjectGroupOne" type="Node2D" parent="Background"]
 position = Vector2(1767, 570)
+metadata/_edit_lock_ = true
 
 [node name="RoofLight1" type="Node2D" parent="Background/HighObjectGroupOne"]
 metadata/_edit_lock_ = true
 
 [node name="PointLight2D" type="PointLight2D" parent="Background/HighObjectGroupOne/RoofLight1"]
-position = Vector2(-802, 133)
+position = Vector2(-804, 153)
 scale = Vector2(2.15059, 1.06747)
 color = Color(0.978256, 0.967602, 7.70092e-07, 1)
 energy = 0.1
