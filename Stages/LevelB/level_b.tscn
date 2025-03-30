@@ -679,6 +679,17 @@ metadata/_edit_lock_ = true
 position = Vector2(1713, 858)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2(0, -300)
+process_callback = 0
+limit_top = 100
+limit_right = 1915
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.1
+drag_top_margin = 0.6
+drag_right_margin = 0.1
+drag_bottom_margin = 0.4
 
 [node name="Foreground" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
