@@ -109,14 +109,14 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3uyv8"]
-radius = 26.0
-height = 216.0
+radius = 39.0
+height = 250.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_lu8i8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.17, 0.17)
+scale = Vector2(0.19, 0.19)
 sprite_frames = SubResource("SpriteFrames_7a1se")
 animation = &"Idle"
 frame_progress = 0.0213237
