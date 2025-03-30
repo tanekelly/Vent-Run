@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://3qqb6s0na0by" path="res://Stages/LevelB/Resources/animation_logic.gd" id="2_d4tyl"]
 [ext_resource type="Texture2D" uid="uid://cgowpbjnqoqwf" path="res://Stages/LevelB/Assets/Art/Distant/block.svg" id="2_r4pgn"]
 [ext_resource type="Texture2D" uid="uid://b31tfwo77yfw3" path="res://Stages/LevelB/Assets/Art/Doors/door1.png" id="3_bquq3"]
-[ext_resource type="PackedScene" uid="uid://bfjsiorrhiy8s" path="res://Entities/Player/reference_controller.tscn" id="3_gvv6p"]
 [ext_resource type="Texture2D" uid="uid://dea8lnbfgk5k7" path="res://Stages/LevelB/Assets/Art/Distant/ground.png" id="3_r4pgn"]
 [ext_resource type="Texture2D" uid="uid://gu8a8yfxd04l" path="res://Stages/LevelB/Assets/Art/Decorations/alarm.png" id="4_jqubx"]
 [ext_resource type="Shader" uid="uid://do2513njjmcgo" path="res://Assets/Shaders/Blur/blur.gdshader" id="4_wnmdb"]
@@ -20,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://xn84njegain7" path="res://Stages/LevelB/Assets/Art/Decorations/shelf1.png" id="11_nuvul"]
 [ext_resource type="Texture2D" uid="uid://vsr0ljjlxpti" path="res://Stages/LevelB/Assets/Art/Instruments/acoguitar1.png" id="12_w1a4a"]
 [ext_resource type="Texture2D" uid="uid://bjh4j031bd03r" path="res://Stages/LevelB/Assets/Art/Lights/lights.png" id="14_850el"]
+[ext_resource type="PackedScene" uid="uid://iex2rhndw1rh" path="res://Entities/Player/player.tscn" id="17_wnmdb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6u7fy"]
 shader = ExtResource("4_wnmdb")
@@ -675,8 +675,10 @@ scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_850el")
 metadata/_edit_lock_ = true
 
-[node name="ControllerReference" parent="." instance=ExtResource("3_gvv6p")]
-position = Vector2(2118, 886)
+[node name="Player" parent="." instance=ExtResource("17_wnmdb")]
+position = Vector2(1713, 858)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="Foreground" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
