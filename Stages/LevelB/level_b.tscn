@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://dibpj5ixgxfvr"]
+[gd_scene load_steps=85 format=3 uid="uid://dibpj5ixgxfvr"]
 
 [ext_resource type="Texture2D" uid="uid://e4qmpcl1p0cw" path="res://Stages/LevelB/Assets/Art/Distant/ceiling.png" id="1_5l77a"]
 [ext_resource type="Texture2D" uid="uid://xcutva6bf22r" path="res://Stages/LevelB/Assets/Art/Distant/wainscoting.png" id="1_1410t"]
@@ -110,6 +110,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_56ype"]
+shader = ExtResource("4_wnmdb")
+shader_parameter/blur_amount = 5.0
+shader_parameter/modulate_color = Color(0, 0, 0, 0.188235)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_i0fqr"]
 atlas = ExtResource("8_0yosl")
 region = Rect2(0, 0, 634, 753)
@@ -153,6 +158,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8844c"]
+shader = ExtResource("4_wnmdb")
+shader_parameter/blur_amount = 5.0
+shader_parameter/modulate_color = Color(0, 0, 0, 0.188235)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_exu7t"]
 atlas = ExtResource("9_nuvul")
 region = Rect2(0, 0, 945, 765)
@@ -195,6 +205,11 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fhs48"]
+shader = ExtResource("4_wnmdb")
+shader_parameter/blur_amount = 5.0
+shader_parameter/modulate_color = Color(0, 0, 0, 0.188235)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5f53k"]
 atlas = ExtResource("10_w1a4a")
@@ -261,6 +276,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ah1kp"]
+shader = ExtResource("4_wnmdb")
+shader_parameter/blur_amount = 5.0
+shader_parameter/modulate_color = Color(0, 0, 0, 0.188235)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_p1m6a"]
 atlas = ExtResource("11_nuvul")
 region = Rect2(0, 0, 754, 1176)
@@ -303,6 +323,11 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mg3nr"]
+shader = ExtResource("4_wnmdb")
+shader_parameter/blur_amount = 5.0
+shader_parameter/modulate_color = Color(0, 0, 0, 0.188235)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gc72n"]
 atlas = ExtResource("12_w1a4a")
@@ -538,32 +563,74 @@ position = Vector2(133, 6)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_i0fqr")
 
-[node name="PaintingOne_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
+[node name="PaintingOne" type="Node2D" parent="Background/LowObjectGroupOne"]
+
+[node name="Shadow2D" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingOne"]
+material = SubResource("ShaderMaterial_56ype")
+position = Vector2(-52, -181)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_p1m6a")
+
+[node name="PaintingOne_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingOne"]
 position = Vector2(-57, -186)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_p1m6a")
 
-[node name="PaintingTwo_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
+[node name="PaintingTwo" type="Node2D" parent="Background/LowObjectGroupOne"]
+
+[node name="Shadow2D" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingTwo"]
+material = SubResource("ShaderMaterial_8844c")
+position = Vector2(-346, -196)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_nwi5m")
+
+[node name="PaintingTwo_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingTwo"]
 position = Vector2(-348, -200)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_nwi5m")
 
-[node name="PaintingThree_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
+[node name="PaintingThree" type="Node2D" parent="Background/LowObjectGroupOne"]
+
+[node name="Shadow2D" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingThree"]
+material = SubResource("ShaderMaterial_fhs48")
+position = Vector2(-606, -188)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_bpfak")
+
+[node name="PaintingThree_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingThree"]
 position = Vector2(-603, -192)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_bpfak")
 
-[node name="Boots_AnimTwo" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
+[node name="Boots" type="Node2D" parent="Background/LowObjectGroupOne"]
+
+[node name="Boots_AnimTwo" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/Boots"]
 position = Vector2(-622, 79)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_sl5uh")
 
-[node name="Shelf1_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
+[node name="Shelf" type="Node2D" parent="Background/LowObjectGroupOne"]
+
+[node name="Shadow2D" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/Shelf"]
+material = SubResource("ShaderMaterial_ah1kp")
+position = Vector2(-758, -12)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_gc72n")
+
+[node name="Shelf1_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/Shelf"]
 position = Vector2(-751, -17)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_gc72n")
 
-[node name="AcoGuitar_AnimTwo" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne"]
+[node name="Aco Guitar" type="Node2D" parent="Background/LowObjectGroupOne"]
+
+[node name="Shadow2D" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/Aco Guitar"]
+material = SubResource("ShaderMaterial_mg3nr")
+position = Vector2(-860, 18)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_dsq2s")
+
+[node name="AcoGuitar_AnimTwo" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/Aco Guitar"]
 position = Vector2(-853, 15)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_dsq2s")
