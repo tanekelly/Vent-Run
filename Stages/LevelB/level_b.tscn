@@ -1,4 +1,4 @@
-[gd_scene load_steps=122 format=3 uid="uid://dibpj5ixgxfvr"]
+[gd_scene load_steps=145 format=3 uid="uid://dibpj5ixgxfvr"]
 
 [ext_resource type="Texture2D" uid="uid://e4qmpcl1p0cw" path="res://Stages/LevelB/Assets/Art/Distant/ceiling.png" id="1_5l77a"]
 [ext_resource type="Texture2D" uid="uid://xcutva6bf22r" path="res://Stages/LevelB/Assets/Art/Distant/wainscoting.png" id="1_1410t"]
@@ -26,6 +26,10 @@
 [ext_resource type="Texture2D" uid="uid://c7rlulvt75nsd" path="res://Stages/LevelB/Assets/Art/Signs/sign-tane.png" id="18_ah1kp"]
 [ext_resource type="Texture2D" uid="uid://dnoc8b20ywxvo" path="res://Stages/LevelB/Assets/Art/Instruments/acobass.png" id="19_fhs48"]
 [ext_resource type="Texture2D" uid="uid://bryrl21nth7hn" path="res://Stages/LevelB/Assets/Art/Decorations/Paintings/painting5.png" id="21_mg3nr"]
+[ext_resource type="Texture2D" uid="uid://0qmpd41fynvv" path="res://Stages/LevelB/Assets/Art/Decorations/Paintings/painting6.png" id="22_i0fqr"]
+[ext_resource type="Texture2D" uid="uid://bh06eaoshoepk" path="res://Stages/LevelB/Assets/Art/Decorations/Paintings/painting7.png" id="23_u53c4"]
+[ext_resource type="Material" uid="uid://t17glsqay780" path="res://Assets/Shaders/Blur/blur.tres" id="24_0vqi3"]
+[ext_resource type="Texture2D" uid="uid://bhnudmvjx0ldg" path="res://Stages/LevelB/Assets/Art/Signs/sign-liam.png" id="25_jdoge"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6u7fy"]
 shader = ExtResource("4_wnmdb")
@@ -679,6 +683,140 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1071r"]
+shader = ExtResource("4_wnmdb")
+shader_parameter/blur_amount = 5.0
+shader_parameter/modulate_color = Color(0, 0, 0, 0.188235)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p12ou"]
+atlas = ExtResource("22_i0fqr")
+region = Rect2(0, 0, 558, 860)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5o414"]
+atlas = ExtResource("22_i0fqr")
+region = Rect2(558, 0, 558, 860)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oi076"]
+atlas = ExtResource("22_i0fqr")
+region = Rect2(1116, 0, 558, 860)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqg5r"]
+atlas = ExtResource("22_i0fqr")
+region = Rect2(1674, 0, 558, 860)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_km33o"]
+atlas = ExtResource("22_i0fqr")
+region = Rect2(2232, 0, 558, 860)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_21vco"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p12ou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5o414")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oi076")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqg5r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_km33o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21vco"]
+atlas = ExtResource("23_u53c4")
+region = Rect2(0, 0, 1179, 1820)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7irtx"]
+atlas = ExtResource("23_u53c4")
+region = Rect2(1179, 0, 1179, 1820)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6u0t"]
+atlas = ExtResource("23_u53c4")
+region = Rect2(2358, 0, 1179, 1820)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oud7a"]
+atlas = ExtResource("23_u53c4")
+region = Rect2(3537, 0, 1179, 1820)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30chh"]
+atlas = ExtResource("23_u53c4")
+region = Rect2(4716, 0, 1179, 1820)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qfeyd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21vco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7irtx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6u0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oud7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30chh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfeyd"]
+atlas = ExtResource("25_jdoge")
+region = Rect2(0, 0, 562, 416)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5pyo"]
+atlas = ExtResource("25_jdoge")
+region = Rect2(562, 0, 562, 416)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xpku"]
+atlas = ExtResource("25_jdoge")
+region = Rect2(1124, 0, 562, 416)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gklr6"]
+atlas = ExtResource("25_jdoge")
+region = Rect2(1686, 0, 562, 416)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_302me"]
+atlas = ExtResource("25_jdoge")
+region = Rect2(2248, 0, 562, 416)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3mlx6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfeyd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5pyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xpku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gklr6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_302me")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gvv6p"]
 
 [node name="LevelB" type="Node2D"]
@@ -762,6 +900,7 @@ material = SubResource("ShaderMaterial_6u7fy")
 position = Vector2(14, 4)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_8844c")
+metadata/_edit_lock_ = true
 
 [node name="BikeOne_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/BikeOne"]
 position = Vector2(5, 1)
@@ -770,106 +909,113 @@ sprite_frames = SubResource("SpriteFrames_8844c")
 metadata/_edit_lock_ = true
 
 [node name="FloorPaintings" type="Node2D" parent="Background/LowObjectGroupOne"]
+position = Vector2(143, 5)
 metadata/_edit_lock_ = true
 
 [node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/FloorPaintings"]
 material = SubResource("ShaderMaterial_wnmdb")
-position = Vector2(145, 2.99999)
+position = Vector2(0.0999908, -2.90003)
 scale = Vector2(0.28, 0.2)
 sprite_frames = SubResource("SpriteFrames_i0fqr")
 metadata/_edit_lock_ = true
 
 [node name="FloorPaintings_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/FloorPaintings"]
-position = Vector2(133, 6)
+position = Vector2(-11.9, 0.0999761)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_i0fqr")
 metadata/_edit_lock_ = true
 
 [node name="PaintingStream" type="Node2D" parent="Background/LowObjectGroupOne"]
+position = Vector2(-59, -178)
 metadata/_edit_lock_ = true
 
 [node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingStream"]
 material = SubResource("ShaderMaterial_56ype")
-position = Vector2(-52, -181)
+position = Vector2(0.400021, 0.299973)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_p1m6a")
 metadata/_edit_lock_ = true
 
 [node name="PaintingOne_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingStream"]
-position = Vector2(-57, -186)
+position = Vector2(-4.59998, -4.70003)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_p1m6a")
 metadata/_edit_lock_ = true
 
 [node name="PaintingColors" type="Node2D" parent="Background/LowObjectGroupOne"]
+position = Vector2(-322, -152)
 metadata/_edit_lock_ = true
 
 [node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingColors"]
 material = SubResource("ShaderMaterial_8844c")
-position = Vector2(-344, -196)
+position = Vector2(0.499969, -0.500015)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_nwi5m")
 metadata/_edit_lock_ = true
 
 [node name="PaintingTwo_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingColors"]
-position = Vector2(-348, -200)
+position = Vector2(-3.50003, -4.50002)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_nwi5m")
 metadata/_edit_lock_ = true
 
-[node name="PaintingFlower" type="Node2D" parent="Background/LowObjectGroupOne"]
+[node name="PaintingFlowerOne" type="Node2D" parent="Background/LowObjectGroupOne"]
+position = Vector2(-560, -140)
 metadata/_edit_lock_ = true
 
-[node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingFlower"]
+[node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingFlowerOne"]
 material = SubResource("ShaderMaterial_fhs48")
-position = Vector2(-609, -185)
+position = Vector2(-0.299987, 0.100022)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_bpfak")
 metadata/_edit_lock_ = true
 
-[node name="PaintingThree_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingFlower"]
-position = Vector2(-603, -192)
+[node name="PaintingThree_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/PaintingFlowerOne"]
+position = Vector2(5.70001, -6.89998)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_bpfak")
 metadata/_edit_lock_ = true
 
 [node name="Boots" type="Node2D" parent="Background/LowObjectGroupOne"]
+position = Vector2(-623, 80)
 metadata/_edit_lock_ = true
 
 [node name="Boots_AnimTwo" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/Boots"]
-position = Vector2(-622, 79)
+position = Vector2(-3.8147e-06, 7.62939e-06)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_sl5uh")
 metadata/_edit_lock_ = true
 
 [node name="Shelf" type="Node2D" parent="Background/LowObjectGroupOne"]
+position = Vector2(-759, -11)
 metadata/_edit_lock_ = true
 
 [node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/Shelf"]
 material = SubResource("ShaderMaterial_ah1kp")
-position = Vector2(-758, -12)
+position = Vector2(0.400023, -0.399995)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_gc72n")
 metadata/_edit_lock_ = true
 
 [node name="Shelf1_Anim" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/Shelf"]
-position = Vector2(-751, -17)
+position = Vector2(7.40002, -5.4)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_gc72n")
 metadata/_edit_lock_ = true
 
 [node name="Aco Guitar" type="Node2D" parent="Background/LowObjectGroupOne"]
+position = Vector2(-841, 3)
 metadata/_edit_lock_ = true
 
 [node name="Shadow2D_AnimTwo" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/Aco Guitar"]
 material = SubResource("ShaderMaterial_mg3nr")
-position = Vector2(-860, 18)
+position = Vector2(-18.5001, 13.2)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_dsq2s")
 metadata/_edit_lock_ = true
 
 [node name="AcoGuitar_AnimTwo" type="AnimatedSprite2D" parent="Background/LowObjectGroupOne/Aco Guitar"]
-position = Vector2(-853, 15)
+position = Vector2(-11.5001, 10.2)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_dsq2s")
 metadata/_edit_lock_ = true
@@ -909,85 +1055,93 @@ metadata/_edit_lock_ = true
 position = Vector2(1767, 570)
 metadata/_edit_lock_ = true
 
-[node name="RoofLight1" type="Node2D" parent="Background/HighObjectGroupOne"]
-metadata/_edit_lock_ = true
+[node name="RoofLightOne" type="Node2D" parent="Background/HighObjectGroupOne"]
+position = Vector2(-756, -129)
 
-[node name="PointLight2D" type="PointLight2D" parent="Background/HighObjectGroupOne/RoofLight1"]
-position = Vector2(-804, 153)
+[node name="PointLight2D" type="PointLight2D" parent="Background/HighObjectGroupOne/RoofLightOne"]
+position = Vector2(1.55103, 268.95)
 scale = Vector2(2.15059, 1.06747)
 color = Color(0.978256, 0.967602, 7.70092e-07, 1)
 energy = 0.1
 texture = ExtResource("15_6u7fy")
-metadata/_edit_lock_ = true
 
-[node name="Shadow2D_AnimTwo" type="AnimatedSprite2D" parent="Background/HighObjectGroupOne/RoofLight1"]
+[node name="Shadow2D_AnimTwo" type="AnimatedSprite2D" parent="Background/HighObjectGroupOne/RoofLightOne"]
 material = SubResource("ShaderMaterial_i0fqr")
-position = Vector2(-805, -447)
+position = Vector2(0.551025, -331.05)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_ivast")
 frame_progress = 0.126516
-metadata/_edit_lock_ = true
 
-[node name="RoofLight1_AnimTwo" type="AnimatedSprite2D" parent="Background/HighObjectGroupOne/RoofLight1"]
-position = Vector2(-805, -441)
+[node name="RoofLight1_AnimTwo" type="AnimatedSprite2D" parent="Background/HighObjectGroupOne/RoofLightOne"]
+position = Vector2(0.551025, -325.05)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_ivast")
 frame_progress = 0.126516
-metadata/_edit_lock_ = true
 
 [node name="LowObjectsGroupTwo" type="Node2D" parent="Background"]
+metadata/_edit_lock_ = true
 
 [node name="TaneDoor" type="Node2D" parent="Background/LowObjectsGroupTwo"]
+position = Vector2(426, 734)
 metadata/_edit_lock_ = true
 
 [node name="TaneDoor_Anim" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/TaneDoor"]
-position = Vector2(398, 822)
+position = Vector2(-0.799957, 89.0001)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_hi33r")
 metadata/_edit_lock_ = true
 
-[node name="TaneSign" type="Node2D" parent="Background/LowObjectsGroupTwo"]
+[node name="TaneSign" type="Node2D" parent="Background/LowObjectsGroupTwo/TaneDoor"]
+position = Vector2(-0.799988, -113)
 metadata/_edit_lock_ = true
 
-[node name="TaneSign_Anim" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/TaneSign"]
-position = Vector2(398, 612)
+[node name="TaneSign_Anim" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/TaneDoor/TaneSign"]
+position = Vector2(-4.99997, -10.9999)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_iqslu")
-
-[node name="PaintingBen" type="Node2D" parent="Background/LowObjectsGroupTwo"]
 metadata/_edit_lock_ = true
 
-[node name="Shadow2D" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/PaintingBen"]
+[node name="PaintingBenSmall" type="Node2D" parent="Background/LowObjectsGroupTwo"]
+position = Vector2(591, 731)
+metadata/_edit_lock_ = true
+
+[node name="Shadow2D" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/PaintingBenSmall"]
 material = SubResource("ShaderMaterial_u53c4")
-position = Vector2(579, 719)
+position = Vector2(-0.399998, 2.2)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_2ep6q")
 metadata/_edit_lock_ = true
 
-[node name="PaintingBen_Anim" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/PaintingBen"]
-position = Vector2(583, 714)
+[node name="PaintingBen_Anim" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/PaintingBenSmall"]
+position = Vector2(3.6, -2.8)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_2ep6q")
 metadata/_edit_lock_ = true
 
 [node name="DoubleBass" type="Node2D" parent="Background/LowObjectsGroupTwo"]
+position = Vector2(133, 923)
+metadata/_edit_lock_ = true
 
 [node name="Shadow2D" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/DoubleBass"]
 material = SubResource("ShaderMaterial_0vqi3")
-position = Vector2(75, 921)
+position = Vector2(0.427242, -0.0643005)
 rotation = -0.0364218
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_qjh8p")
 frame_progress = 0.908646
+metadata/_edit_lock_ = true
 
 [node name="DoubleBass_AnimTwo" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/DoubleBass"]
-position = Vector2(75, 917)
+position = Vector2(0.427242, -4.0643)
 rotation = -0.0364218
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_qjh8p")
 frame_progress = 0.908646
+metadata/_edit_lock_ = true
 
 [node name="PolaroidPhotosOne" type="Node2D" parent="Background/LowObjectsGroupTwo"]
+position = Vector2(244, 761)
+metadata/_edit_lock_ = true
 
 [node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/PolaroidPhotosOne"]
 material = SubResource("ShaderMaterial_jdoge")
@@ -995,12 +1149,71 @@ position = Vector2(213, 767)
 rotation = -0.0364218
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_p12ou")
+metadata/_edit_lock_ = true
 
 [node name="PolaroidPhotosOne_Anim" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/PolaroidPhotosOne"]
-position = Vector2(213, 763)
 rotation = -0.0364218
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_p12ou")
+metadata/_edit_lock_ = true
+
+[node name="PaintingJelly" type="Node2D" parent="Background/LowObjectsGroupTwo"]
+position = Vector2(103, 774)
+metadata/_edit_lock_ = true
+
+[node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/PaintingJelly"]
+material = SubResource("ShaderMaterial_1071r")
+position = Vector2(-0.0115051, 0.00205231)
+rotation = 0.00925129
+scale = Vector2(0.184612, 0.184612)
+sprite_frames = SubResource("SpriteFrames_21vco")
+metadata/_edit_lock_ = true
+
+[node name="PolaroidPhotosOne_Anim" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/PaintingJelly"]
+position = Vector2(-1.0115, -3.99789)
+rotation = 0.00925129
+scale = Vector2(0.187261, 0.187261)
+sprite_frames = SubResource("SpriteFrames_21vco")
+metadata/_edit_lock_ = true
+
+[node name="PaintingBen" type="Node2D" parent="Background/LowObjectsGroupTwo"]
+position = Vector2(-86, 785)
+metadata/_edit_lock_ = true
+
+[node name="Shadow2D_Anim" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/PaintingBen"]
+material = ExtResource("24_0vqi3")
+position = Vector2(-0.0968781, 3.82352)
+rotation = -0.172302
+scale = Vector2(0.172238, 0.172238)
+sprite_frames = SubResource("SpriteFrames_qfeyd")
+metadata/_edit_lock_ = true
+
+[node name="PaintingBen_Anim" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/PaintingBen"]
+position = Vector2(-0.0968781, -0.176544)
+rotation = -0.172302
+scale = Vector2(0.172238, 0.172238)
+sprite_frames = SubResource("SpriteFrames_qfeyd")
+metadata/_edit_lock_ = true
+
+[node name="LiamDoor" type="Node2D" parent="Background/LowObjectsGroupTwo"]
+position = Vector2(-300, 823)
+metadata/_edit_lock_ = true
+
+[node name="LiamDoor_Anim" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/LiamDoor"]
+position = Vector2(3.05176e-05, 1.00006)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_hi33r")
+metadata/_edit_lock_ = true
+
+[node name="LiamSign" type="Node2D" parent="Background/LowObjectsGroupTwo/LiamDoor"]
+position = Vector2(-5, -218)
+metadata/_edit_lock_ = true
+
+[node name="LiamSign_Anim" type="AnimatedSprite2D" parent="Background/LowObjectsGroupTwo/LiamDoor/LiamSign"]
+position = Vector2(2.00006, 2.00006)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_3mlx6")
+metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("17_wnmdb")]
 position = Vector2(1747, 723)
@@ -1019,7 +1232,6 @@ drag_right_margin = 0.1
 drag_bottom_margin = 0.0
 
 [node name="Foreground" type="Node2D" parent="."]
-metadata/_edit_lock_ = true
 
 [node name="Ceiling" type="Node2D" parent="Foreground"]
 metadata/_edit_lock_ = true

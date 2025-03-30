@@ -4,9 +4,5 @@
 
 [resource]
 shader = ExtResource("1_i15a2")
-shader_parameter/blur_radius = 8
-shader_parameter/Darkness = 0.1
-shader_parameter/R = 0.0
-shader_parameter/G = 0.0
-shader_parameter/B = 0.0
-shader_parameter/blur_strength = 1.0
+shader_parameter/blur_amount = 5.0
+shader_parameter/modulate_color = Color(0, 0, 0, 0.188235)
