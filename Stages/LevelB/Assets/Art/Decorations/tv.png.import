@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://27aemcx1gj0a"
-path="res://.godot/imported/bike1.png-75714d30e6a36f3c8bb5765c21652700.ctex"
+uid="uid://boawki3rfj2k0"
+path="res://.godot/imported/tv.png-effc0f35a3d8a36cd62d0bf63e53e206.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Stages/LevelB/Assets/Art/Decorations/bike1.png"
-dest_files=["res://.godot/imported/bike1.png-75714d30e6a36f3c8bb5765c21652700.ctex"]
+source_file="res://Stages/LevelB/Assets/Art/Decorations/tv.png"
+dest_files=["res://.godot/imported/tv.png-effc0f35a3d8a36cd62d0bf63e53e206.ctex"]
 
 [params]
 

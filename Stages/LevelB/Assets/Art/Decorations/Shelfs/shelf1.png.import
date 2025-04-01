@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xn84njegain7"
-path="res://.godot/imported/shelf1.png-ff69ce75a009835c1d71b751a235bdfe.ctex"
+path="res://.godot/imported/shelf1.png-fb8a23726d6ed9fefae782e9b664f84a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Stages/LevelB/Assets/Art/Decorations/shelf1.png"
-dest_files=["res://.godot/imported/shelf1.png-ff69ce75a009835c1d71b751a235bdfe.ctex"]
+source_file="res://Stages/LevelB/Assets/Art/Decorations/Shelfs/shelf1.png"
+dest_files=["res://.godot/imported/shelf1.png-fb8a23726d6ed9fefae782e9b664f84a.ctex"]
 
 [params]
 
