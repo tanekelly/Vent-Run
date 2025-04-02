@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="vent-run"
-run/main_scene="uid://dibpj5ixgxfvr"
+run/main_scene="uid://84nqfp86crbw"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/bg_color=Color(1, 1, 1, 1)
 boot_splash/image="uid://c12r7aikbbmop"
