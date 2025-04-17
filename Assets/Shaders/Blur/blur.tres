@@ -1,8 +1,0 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://t17glsqay780"]
-
-[ext_resource type="Shader" uid="uid://do2513njjmcgo" path="res://Assets/Shaders/Blur/blur.gdshader" id="1_i15a2"]
-
-[resource]
-shader = ExtResource("1_i15a2")
-shader_parameter/blur_amount = 5.0
-shader_parameter/modulate_color = Color(0, 0, 0, 0.188235)
